@@ -118,7 +118,9 @@ def build_response(image_path, image_id, cache_key, use_cache=True):
                 best, bestd = p, d
 
         if best is not None:
-            diam_px = (best.get("width", 0) + best.get("height", 0)) / 2.0
+            # วัดจากศูนย์กลางแผ่น (พิกัดต้นฉบับ -> scale=1.0) ไม่มี polygon ค่อยถอยไปใช้ bbox
+            diam_px = (az.fit_zone_diameter(best.get("points"), cxo, cyo, 1.0)
+                       or (best.get("width", 0) + best.get("height", 0)) / 2.0)
             diameter_mm = round(diam_px / ppm_orig, 1) if ppm_orig else None
             if diameter_mm is not None and diameter_mm < az.DISK_MM:
                 diameter_mm = az.DISK_MM

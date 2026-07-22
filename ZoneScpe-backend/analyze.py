@@ -33,6 +33,7 @@ import interpret as interp
 BACKEND = Path(__file__).resolve().parent
 DISK_MM = 6.0                 # แผ่น 6mm — floor เมื่อไม่มี zone (§9.4)
 RESIZE_LONG = 1500            # ต้องตรงกับ 01/04
+ZONE_EDGE_PCT = 80            # percentile ของระยะขอบ zone (ดู fit_zone_diameter) — จูนจาก val 13 ภาพ
 ZONE_CACHE = BACKEND / "zone_cache"
 BUILD_REPORT = BACKEND / "zonescope_out" / "build_report.csv"
 
@@ -62,7 +63,11 @@ def _ocr_candidates():
 
 
 def get_zones(image_path, use_cache=True):
-    """เรียก Roboflow workflow (หรือใช้ cache) -> list ของ zone (พิกัดภาพต้นฉบับ)"""
+    """ตรวจ zone (โมเดลเราเอง หรือ Roboflow — ดู zone_backend) -> list พิกัดภาพต้นฉบับ
+
+    ใช้ extract_predictions เพื่อเก็บ polygon "points" ไว้ด้วย เพราะ fit_zone_diameter
+    ต้องใช้ขอบวงจริง ไม่ใช่แค่กรอบ bbox
+    """
     ZONE_CACHE.mkdir(exist_ok=True)
     cache = ZONE_CACHE / f"{Path(image_path).stem}.json"
     if use_cache and cache.exists():
@@ -71,7 +76,40 @@ def get_zones(image_path, use_cache=True):
         outputs = zone_infer.run_zone_workflow(str(image_path))
         entry = outputs[0] if outputs else {}
         cache.write_text(json.dumps(entry), encoding="utf-8")  # กัน credit รอบหน้า
-    return zone_infer.extract_zones(entry)
+    return zone_infer.extract_predictions(entry)
+
+
+def fit_zone_diameter(points, cx, cy, scale=1.0):
+    """เส้นผ่านศูนย์กลาง zone โดยวัดจาก "ศูนย์กลางแผ่นยา" ออกไปหาขอบ polygon
+
+    ทำไมไม่ใช้กรอบ bbox ตรงๆ: เมื่อ zone ซ้อนกัน mask จะถูกวงข้างเคียงตัด กรอบเลยเล็ก
+    กว่าจริง (วัดได้ต่ำกว่าความจริงอย่างเป็นระบบ ~3%)
+
+    วิธีนี้: zone เป็นวงกลมร่วมศูนย์กับแผ่น และศูนย์กลางแผ่นได้จาก Hough ซึ่งไม่ถูกบัง
+    จุดขอบที่โดนตัดจะอยู่ "ใกล้" ศูนย์กลางผิดปกติ จึงใช้ percentile สูงแทนค่าสูงสุด/เฉลี่ย
+    — ข้ามส่วนที่ถูกตัดได้โดยไม่ไวต่อจุด outlier
+
+    วัดกับ ground truth 13 ภาพ: bias -2.9% -> +0.2% (ความกระจายเท่าเดิม ~6.8%)
+
+    points : [{"x":..,"y":..}] พิกัดจากโมเดล (ภาพต้นฉบับ)
+    cx, cy : ศูนย์กลางแผ่น — ต้องอยู่ในระบบพิกัดที่ต้องการผลลัพธ์
+    scale  : ตัวคูณแปลง points ให้เข้าระบบพิกัดของ cx,cy (1.0 = ระบบเดียวกัน)
+    คืน None ถ้าไม่มี polygon -> ผู้เรียกควร fallback ไปใช้ bbox
+    """
+    dists = []
+    for p in points or []:
+        px, py = p.get("x"), p.get("y")
+        if px is None or py is None:
+            continue
+        dists.append((((px * scale) - cx) ** 2 + ((py * scale) - cy) ** 2) ** 0.5)
+    if not dists:
+        return None
+    dists.sort()
+    k = (len(dists) - 1) * ZONE_EDGE_PCT / 100.0      # percentile แบบ interpolate (เท่า numpy)
+    lo = int(k)
+    hi = min(lo + 1, len(dists) - 1)
+    radius = dists[lo] + (dists[hi] - dists[lo]) * (k - lo)
+    return radius * 2.0
 
 
 def _crop_disk(img0, cx1500, cy1500, r1500, up):
@@ -121,7 +159,8 @@ def analyze_plate(image_path, organism, use_cache=True):
             continue
         z1500.append({
             "cx": z["x"] * scale, "cy": z["y"] * scale,
-            "d": ((z.get("width", 0) + z.get("height", 0)) / 2.0) * scale,
+            "d": ((z.get("width", 0) + z.get("height", 0)) / 2.0) * scale,   # fallback
+            "points": z.get("points"),          # พิกัดต้นฉบับ — fit_zone_diameter สเกลเอง
             "conf": z.get("confidence"),
         })
 
@@ -142,7 +181,9 @@ def analyze_plate(image_path, organism, use_cache=True):
                 best_z, best_d = z, dist
 
         if best_z is not None:
-            diameter_mm = round(best_z["d"] / ppm, 1)
+            # วัดจากศูนย์กลางแผ่น (แม่นกว่า) ถ้าไม่มี polygon ค่อยถอยไปใช้ bbox
+            d_px = fit_zone_diameter(best_z.get("points"), cx, cy, scale) or best_z["d"]
+            diameter_mm = round(d_px / ppm, 1)
             zone_conf = best_z["conf"]
         else:
             diameter_mm = DISK_MM          # ไม่มี zone = ดื้อสนิท (§9.4)
