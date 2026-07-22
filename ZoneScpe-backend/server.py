@@ -31,7 +31,7 @@ from fastapi.staticfiles import StaticFiles
 
 import analyze as az
 import interpret as interp
-import zone_infer
+import zone_backend as zone_infer   # สลับ local/roboflow ให้อัตโนมัติ (ดู zone_backend.py)
 
 BACKEND = Path(__file__).resolve().parent
 UPLOADS = BACKEND / "uploads"

@@ -27,7 +27,7 @@ from pathlib import Path
 
 import cv2
 
-import zone_infer
+import zone_backend as zone_infer   # สลับ local/roboflow ให้อัตโนมัติ (ดู zone_backend.py)
 import interpret as interp
 
 BACKEND = Path(__file__).resolve().parent

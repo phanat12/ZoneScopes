@@ -7,4 +7,7 @@ python-multipart
 opencv-python-headless
 numpy
 easyocr
+# ตรวจ zone ด้วยโมเดลของเราเอง (zone_local.py) — ไม่ใช้ Roboflow credit
+# ⚠️ ล็อกเวอร์ชันไว้: 8.4.x เทรน/รัน YOLOv8-seg เพี้ยน (mAP ตกเหลือ ~0.02) 8.3.155 ปกติดี
+ultralytics==8.3.155
 # openpyxl ใช้เฉพาะ gen_breakpoints.py (dev tool) ไม่จำเป็นตอน runtime
