@@ -1,11 +1,13 @@
 // Single switch between mock data and the real FastAPI backend (web_spec.md §6).
-// VITE_USE_MOCK=true  -> read bundled mock JSON (no backend needed for M1)
-// VITE_USE_MOCK=false -> POST multipart/form-data to /api/analyze
+// VITE_USE_MOCK=true  -> read bundled mock JSON (demo only, no backend needed)
+// anything else/unset -> POST multipart/form-data to /api/analyze (real backend)
+// Mock is opt-in on purpose: a missing env var must never silently serve fake
+// results in production.
 
 import analyzeMock from '../mocks/analyze.json'
 import breakpointsMock from '../mocks/breakpoints.json'
 
-const USE_MOCK = import.meta.env.VITE_USE_MOCK !== 'false'
+const USE_MOCK = import.meta.env.VITE_USE_MOCK === 'true'
 
 const delay = (ms) => new Promise((r) => setTimeout(r, ms))
 
