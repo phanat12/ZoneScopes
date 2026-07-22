@@ -139,10 +139,25 @@ npm run dev   → http://localhost:5173
 # อัปโหลด P001.jpg = ฟรี (cache) ; ภาพอื่น = 1 credit/ใบ
 ```
 
+### breakpoints ฉบับแลปรับรอง + เตรียม deploy — 2026-07-22
+- **breakpoints.json ใหม่จาก `AST_data_review2.xlsx` (แลปรับรองแล้ว)** ผ่าน `gen_breakpoints.py`
+  - **29 organisms, 30 antibiotics, 127 rules, `verified_by_lab=true`** เขียนทั้ง backend + frontend mock
+  - เพิ่ม `antibiotics[]` มี `disk_aliases` → map **รหัส OCR (TZP110) → system code (TZP100_10)**
+  - `interpret.py` อ่าน breakpoints จาก backend (ไม่ใช่ path frontend) + `disk_alias_map`/`ocr_candidates`
+  - server.py/analyze.py แปลง OCR → system code ให้ตรง rules
+- **เตรียม deploy ครบ:**
+  - `requirements.txt`, `Dockerfile` (torch CPU + pre-download easyocr), `.dockerignore`
+  - `server.py` เพิ่ม CORS (env `ZONESCOPE_CORS_ORIGINS`)
+  - frontend `vercel.json` (rewrite /api,/uploads → backend), root `.gitignore`, `render.yaml`, `DEPLOY.md`
+  - **git init + commit แล้ว** (repo root = โฟลเดอร์ frontend+backend) — พร้อม push GitHub
+  - git ใช้ MinGit portable ที่ `C:\Users\Administrator\Downloads\MinGit\cmd\git.exe` (เครื่องไม่มี git)
+- สถาปัตยกรรม: **Frontend→Vercel, Backend→host ที่ RAM≥2GB** (torch/easyocr หนัก; ดู DEPLOY.md)
+
 ### ต่อยอด (ถ้าจะทำ)
 - ปรับการวัดขนาด zone (fit วงจากจุดกลางแผ่น) ให้แม่นขึ้น โดยเฉพาะวงซ้อน
 - ทำ `/api/report` จริง (CSV/PDF export §5.4)
-- ให้ทีมแลปรับรอง breakpoints (verified_by_lab=true) ก่อนใช้จริง
+- เพิ่ม auth/rate-limit ที่ `/api/analyze` ก่อนเปิด public (กันเผา credit)
+- rotate Roboflow API key (เคยโผล่ในสกรีนช็อต)
 
 ---
 
