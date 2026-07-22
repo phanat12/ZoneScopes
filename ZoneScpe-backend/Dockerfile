@@ -1,9 +1,10 @@
 # ZoneScope backend — FastAPI + easyocr (CPU) + opencv
 FROM python:3.12-slim
 
-# lib ที่ opencv-headless / easyocr ต้องใช้ตอน runtime
+# lib ที่ opencv / easyocr ต้องใช้ตอน runtime
+# libgl1 จำเป็นเพราะ ultralytics ดึง opencv-python (ตัวเต็ม) มาทับ headless -> import cv2 ต้องมี libGL
 RUN apt-get update && apt-get install -y --no-install-recommends \
-      libglib2.0-0 libgomp1 \
+      libglib2.0-0 libgomp1 libgl1 \
  && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
