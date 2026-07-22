@@ -1,0 +1,5 @@
+# auto-HTTPS ผ่าน Let's Encrypt — SITE_ADDRESS = โดเมน (เช่น <ip>.nip.io)
+{$SITE_ADDRESS} {
+	encode gzip
+	reverse_proxy backend:8000
+}

@@ -1,0 +1,32 @@
+# ZoneScope backend + Caddy (auto-HTTPS) — สำหรับ VPS (Hetzner ฯลฯ)
+# ตั้งค่าใน deploy/.env: ROBOFLOW_API_KEY, ZONESCOPE_CORS_ORIGINS, SITE_ADDRESS
+services:
+  backend:
+    build:
+      context: ../ZoneScpe-backend
+    environment:
+      - ROBOFLOW_API_KEY=${ROBOFLOW_API_KEY}
+      - ZONESCOPE_CORS_ORIGINS=${ZONESCOPE_CORS_ORIGINS}
+      - PORT=8000
+    expose:
+      - "8000"
+    restart: unless-stopped
+
+  caddy:
+    image: caddy:2
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - SITE_ADDRESS=${SITE_ADDRESS}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  caddy_data:
+  caddy_config:
