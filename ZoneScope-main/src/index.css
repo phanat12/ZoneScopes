@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* PSU Stidti webfont — served from /public/fonts */
+@font-face {
+  font-family: 'PSU Stidti';
+  src: url('/fonts/psu-stidti-light.woff2') format('woff2'),
+       url('/fonts/psu-stidti-light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PSU Stidti';
+  src: url('/fonts/psu-stidti-lightitalic.woff2') format('woff2'),
+       url('/fonts/psu-stidti-lightitalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PSU Stidti';
+  src: url('/fonts/psu-stidti-regular.woff2') format('woff2'),
+       url('/fonts/psu-stidti-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PSU Stidti';
+  src: url('/fonts/psu-stidti-italic.woff2') format('woff2'),
+       url('/fonts/psu-stidti-italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PSU Stidti';
+  src: url('/fonts/psu-stidti-bold.woff2') format('woff2'),
+       url('/fonts/psu-stidti-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PSU Stidti';
+  src: url('/fonts/psu-stidti-bolditalic.woff2') format('woff2'),
+       url('/fonts/psu-stidti-bolditalic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f4f8fc;
+  color: #14202e;
+  font-family: 'PSU Stidti', 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+/* Numeric measurements read as instrument data, not prose */
+.tnum {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+/* Focus ring — keep keyboard nav visible (quality floor) */
+:focus-visible {
+  outline: 2px solid #000080;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl font-semibold transition-colors select-none;
+    @apply disabled:opacity-40 disabled:pointer-events-none;
+  }
+  .btn-lg {
+    @apply h-14 px-6 text-[15px];
+  }
+  .btn-md {
+    @apply h-11 px-4 text-sm;
+  }
+  .btn-primary {
+    @apply bg-teal text-white active:bg-teal-700;
+  }
+  .btn-ghost {
+    @apply bg-white text-ink border border-agar-300 active:bg-agar-50;
+  }
+  .btn-subtle {
+    @apply bg-agar-100 text-ink-soft active:bg-agar-200;
+  }
+  .field-label {
+    @apply text-xs font-semibold uppercase tracking-wider text-ink-faint;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-card;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

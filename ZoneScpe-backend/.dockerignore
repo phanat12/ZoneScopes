@@ -1,0 +1,12 @@
+.env
+__pycache__/
+*.pyc
+uploads/
+zone_cache/
+ocr_crops/
+zonescope_out/label_overlays/
+zonescope_out/number_overlays/
+zonescope_dataset/
+zonescope_dataset_single/
+*.zip
+.vscode/

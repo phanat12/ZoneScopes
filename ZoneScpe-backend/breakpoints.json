@@ -1,0 +1,1323 @@
+{
+  "standard": "SD-IN-03-MI-BM-002 Zone Diameter Interpretive Standards 2026 (CLSI M100 2026 / M45 3rd / EUCAST 2026) — ผ่านการตรวจรับรองจากทีมแลปแล้ว",
+  "verified_by_lab": true,
+  "organisms": [
+    {
+      "id": "acinetobacter_baumannii_complex",
+      "label": "Acinetobacter baumannii complex"
+    },
+    {
+      "id": "acinetobacter_spp",
+      "label": "Acinetobacter spp."
+    },
+    {
+      "id": "aeromonas_spp",
+      "label": "Aeromonas spp."
+    },
+    {
+      "id": "enterobacterales",
+      "label": "Enterobacterales"
+    },
+    {
+      "id": "enterococcus",
+      "label": "Enterococcus"
+    },
+    {
+      "id": "enterococcus_faecalis",
+      "label": "Enterococcus faecalis"
+    },
+    {
+      "id": "enterococcus_spp",
+      "label": "Enterococcus spp."
+    },
+    {
+      "id": "escherichia_coli",
+      "label": "Escherichia coli"
+    },
+    {
+      "id": "gram_negative_bacilli",
+      "label": "Gram negative bacilli"
+    },
+    {
+      "id": "haemophilus_influenzae",
+      "label": "Haemophilus influenzae"
+    },
+    {
+      "id": "haemophilus_parainfluenzae",
+      "label": "Haemophilus parainfluenzae"
+    },
+    {
+      "id": "moraxella_catarrhalis",
+      "label": "Moraxella catarrhalis"
+    },
+    {
+      "id": "neisseria_gonorrhoeae",
+      "label": "Neisseria gonorrhoeae"
+    },
+    {
+      "id": "neisseria_meningitidis",
+      "label": "Neisseria meningitidis"
+    },
+    {
+      "id": "pseudomonas_aeruginosa",
+      "label": "Pseudomonas aeruginosa"
+    },
+    {
+      "id": "salmonella_spp",
+      "label": "Salmonella spp."
+    },
+    {
+      "id": "shigella_spp",
+      "label": "Shigella spp."
+    },
+    {
+      "id": "staphylococcus_aureus",
+      "label": "Staphylococcus aureus"
+    },
+    {
+      "id": "staphylococcus_coagulans",
+      "label": "Staphylococcus coagulans"
+    },
+    {
+      "id": "staphylococcus_epidermidis",
+      "label": "Staphylococcus epidermidis"
+    },
+    {
+      "id": "staphylococcus_lugdunensis",
+      "label": "Staphylococcus lugdunensis"
+    },
+    {
+      "id": "staphylococcus_pseudintermedius",
+      "label": "Staphylococcus pseudintermedius"
+    },
+    {
+      "id": "staphylococcus_schleiferi",
+      "label": "Staphylococcus schleiferi"
+    },
+    {
+      "id": "staphylococcus_spp",
+      "label": "Staphylococcus spp."
+    },
+    {
+      "id": "stenotrophomonas_maltophilia",
+      "label": "Stenotrophomonas maltophilia"
+    },
+    {
+      "id": "streptococcus_pneumoniae",
+      "label": "Streptococcus pneumoniae"
+    },
+    {
+      "id": "vibrio_spp",
+      "label": "Vibrio spp."
+    },
+    {
+      "id": "viridans_group_streptococcus",
+      "label": "Viridans group Streptococcus"
+    },
+    {
+      "id": "beta_streptococcus_spp",
+      "label": "β-Streptococcus spp."
+    }
+  ],
+  "antibiotics": [
+    {
+      "code": "AN30",
+      "label": "Amikacin (30 µg)",
+      "name": "Amikacin",
+      "amount": "30 µg",
+      "disk_aliases": [
+        "AN30",
+        "AN 30",
+        "AK30"
+      ]
+    },
+    {
+      "code": "AM10",
+      "label": "Ampicillin (10 µg)",
+      "name": "Ampicillin",
+      "amount": "10 µg",
+      "disk_aliases": [
+        "AM10",
+        "AM 10",
+        "AMP10"
+      ]
+    },
+    {
+      "code": "AMC20_10",
+      "label": "Amoxicillin/clavulanate (20/10 µg)",
+      "name": "Amoxicillin/clavulanate",
+      "amount": "20/10 µg",
+      "disk_aliases": [
+        "AMC30",
+        "AMC 30",
+        "AMC"
+      ]
+    },
+    {
+      "code": "AZT30",
+      "label": "Aztreonam (30 µg)",
+      "name": "Aztreonam",
+      "amount": "30 µg",
+      "disk_aliases": [
+        "ATM30",
+        "AZT30"
+      ]
+    },
+    {
+      "code": "CTX30",
+      "label": "Cefotaxime (30 µg)",
+      "name": "Cefotaxime",
+      "amount": "30 µg",
+      "disk_aliases": [
+        "CTX30",
+        "CTX 30"
+      ]
+    },
+    {
+      "code": "FOX30",
+      "label": "Cefoxitin (30 µg)",
+      "name": "Cefoxitin",
+      "amount": "30 µg",
+      "disk_aliases": [
+        "FOX30",
+        "FOX 30"
+      ]
+    },
+    {
+      "code": "CAZ30",
+      "label": "Ceftazidime (30 µg)",
+      "name": "Ceftazidime",
+      "amount": "30 µg",
+      "disk_aliases": [
+        "CAZ30",
+        "CAZ 30"
+      ]
+    },
+    {
+      "code": "CRO30",
+      "label": "Ceftriaxone (30 µg)",
+      "name": "Ceftriaxone",
+      "amount": "30 µg",
+      "disk_aliases": [
+        "CRO30",
+        "CRO 30"
+      ]
+    },
+    {
+      "code": "CXM30",
+      "label": "Cefuroxime (30 µg)",
+      "name": "Cefuroxime",
+      "amount": "30 µg",
+      "disk_aliases": [
+        "CXM30",
+        "CXM 30"
+      ]
+    },
+    {
+      "code": "CIP5",
+      "label": "Ciprofloxacin (5 µg)",
+      "name": "Ciprofloxacin",
+      "amount": "5 µg",
+      "disk_aliases": [
+        "CIP5",
+        "CIP 5"
+      ]
+    },
+    {
+      "code": "CC2",
+      "label": "Clindamycin (2 µg)",
+      "name": "Clindamycin",
+      "amount": "2 µg",
+      "disk_aliases": [
+        "DA2",
+        "DA 2",
+        "CC2",
+        "CD2"
+      ]
+    },
+    {
+      "code": "ETP10",
+      "label": "Ertapenem (10 µg)",
+      "name": "Ertapenem",
+      "amount": "10 µg",
+      "disk_aliases": [
+        "ETP10",
+        "ETP 10"
+      ]
+    },
+    {
+      "code": "E15",
+      "label": "Erythromycin (15 µg)",
+      "name": "Erythromycin",
+      "amount": "15 µg",
+      "disk_aliases": [
+        "E15",
+        "E 15"
+      ]
+    },
+    {
+      "code": "FOS200",
+      "label": "Fosfomycin (200 µg)",
+      "name": "Fosfomycin",
+      "amount": "200 µg",
+      "disk_aliases": [
+        "FOS200",
+        "FOS 200"
+      ]
+    },
+    {
+      "code": "FU10",
+      "label": "Fusidic acid (10 µg)",
+      "name": "Fusidic acid",
+      "amount": "10 µg",
+      "disk_aliases": [
+        "FD10",
+        "FU10"
+      ]
+    },
+    {
+      "code": "GM10",
+      "label": "Gentamicin (10 µg)",
+      "name": "Gentamicin",
+      "amount": "10 µg",
+      "disk_aliases": [
+        "CN10",
+        "GM10",
+        "GM 10"
+      ]
+    },
+    {
+      "code": "GM120",
+      "label": "Gentamicin (high content) (120 µg)",
+      "name": "Gentamicin (high content)",
+      "amount": "120 µg",
+      "disk_aliases": [
+        "CN120",
+        "GM120"
+      ]
+    },
+    {
+      "code": "IPM10",
+      "label": "Imipenem (10 µg)",
+      "name": "Imipenem",
+      "amount": "10 µg",
+      "disk_aliases": [
+        "IPM10",
+        "IMP10"
+      ]
+    },
+    {
+      "code": "MEM10",
+      "label": "Meropenem (10 µg)",
+      "name": "Meropenem",
+      "amount": "10 µg",
+      "disk_aliases": [
+        "MEM10",
+        "MEM 10"
+      ]
+    },
+    {
+      "code": "NX10",
+      "label": "Norfloxacin (10 µg)",
+      "name": "Norfloxacin",
+      "amount": "10 µg",
+      "disk_aliases": [
+        "NOR10",
+        "NOR 10",
+        "NX10"
+      ]
+    },
+    {
+      "code": "OX1",
+      "label": "Oxacillin (1 µg)",
+      "name": "Oxacillin",
+      "amount": "1 µg",
+      "disk_aliases": [
+        "OX1",
+        "OX 1"
+      ]
+    },
+    {
+      "code": "P10",
+      "label": "Penicillin (10 units)",
+      "name": "Penicillin",
+      "amount": "10 units",
+      "disk_aliases": [
+        "P10",
+        "P 10"
+      ]
+    },
+    {
+      "code": "TE30",
+      "label": "Tetracycline (30 µg)",
+      "name": "Tetracycline",
+      "amount": "30 µg",
+      "disk_aliases": [
+        "TE30",
+        "TE 30"
+      ]
+    },
+    {
+      "code": "TGC15",
+      "label": "Tigecycline (15 µg)",
+      "name": "Tigecycline",
+      "amount": "15 µg",
+      "disk_aliases": [
+        "TGC15",
+        "TGC 15"
+      ]
+    },
+    {
+      "code": "SXT",
+      "label": "Trimethoprim/sulfamethoxazole (1.25/23.75 µg)",
+      "name": "Trimethoprim/sulfamethoxazole",
+      "amount": "1.25/23.75 µg",
+      "disk_aliases": [
+        "SXT25",
+        "SXT",
+        "SXT 25"
+      ]
+    },
+    {
+      "code": "VA30",
+      "label": "Vancomycin (30 µg)",
+      "name": "Vancomycin",
+      "amount": "30 µg",
+      "disk_aliases": [
+        "VA30",
+        "VA 30"
+      ]
+    },
+    {
+      "code": "SCF30_75",
+      "label": "Sulbactam/Cefoperazone (30/75 µg)",
+      "name": "Sulbactam/Cefoperazone",
+      "amount": "30/75 µg",
+      "disk_aliases": [
+        "SCF105",
+        "SCF"
+      ]
+    },
+    {
+      "code": "TZP100_10",
+      "label": "Piperacillin/Tazobactam (100/10 µg)",
+      "name": "Piperacillin/Tazobactam",
+      "amount": "100/10 µg",
+      "disk_aliases": [
+        "TZP110",
+        "TZP"
+      ]
+    },
+    {
+      "code": "CZA30_20",
+      "label": "Ceftazidime/Avibactam (30/20 µg)",
+      "name": "Ceftazidime/Avibactam",
+      "amount": "30/20 µg",
+      "disk_aliases": [
+        "CZA50",
+        "CZA"
+      ]
+    },
+    {
+      "code": "CT30_20",
+      "label": "Ceftolozane/Tazobactam (30/20 µg)",
+      "name": "Ceftolozane/Tazobactam",
+      "amount": "30/20 µg",
+      "disk_aliases": [
+        "C/T50",
+        "CT50"
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "organism": "enterobacterales",
+      "antibiotic": "AN30",
+      "s_min": 20,
+      "r_max": 16,
+      "i_range": "17-19"
+    },
+    {
+      "organism": "pseudomonas_aeruginosa",
+      "antibiotic": "AN30",
+      "s_min": 17,
+      "r_max": 14,
+      "i_range": "15-16"
+    },
+    {
+      "organism": "aeromonas_spp",
+      "antibiotic": "AN30",
+      "s_min": 17,
+      "r_max": 14,
+      "i_range": "15-16"
+    },
+    {
+      "organism": "vibrio_spp",
+      "antibiotic": "AN30",
+      "s_min": 17,
+      "r_max": 14,
+      "i_range": "15-16"
+    },
+    {
+      "organism": "acinetobacter_spp",
+      "antibiotic": "AN30",
+      "s_min": 20,
+      "r_max": 16,
+      "i_range": "17-19"
+    },
+    {
+      "organism": "enterobacterales",
+      "antibiotic": "AM10",
+      "s_min": 17,
+      "r_max": 13,
+      "i_range": "14-16"
+    },
+    {
+      "organism": "salmonella_spp",
+      "antibiotic": "AM10",
+      "s_min": 17,
+      "r_max": 13,
+      "i_range": "14-16"
+    },
+    {
+      "organism": "shigella_spp",
+      "antibiotic": "AM10",
+      "s_min": 17,
+      "r_max": 13,
+      "i_range": "14-16"
+    },
+    {
+      "organism": "vibrio_spp",
+      "antibiotic": "AM10",
+      "s_min": 17,
+      "r_max": 13,
+      "i_range": "14-16"
+    },
+    {
+      "organism": "enterococcus_spp",
+      "antibiotic": "AM10",
+      "s_min": 17,
+      "r_max": 16,
+      "i_range": "-"
+    },
+    {
+      "organism": "beta_streptococcus_spp",
+      "antibiotic": "AM10",
+      "s_min": 24,
+      "r_max": 23,
+      "i_range": "-"
+    },
+    {
+      "organism": "haemophilus_influenzae",
+      "antibiotic": "AM10",
+      "s_min": 22,
+      "r_max": 18,
+      "i_range": "19-21"
+    },
+    {
+      "organism": "haemophilus_parainfluenzae",
+      "antibiotic": "AM10",
+      "s_min": 22,
+      "r_max": 18,
+      "i_range": "19-21"
+    },
+    {
+      "organism": "enterobacterales",
+      "antibiotic": "AMC20_10",
+      "s_min": 18,
+      "r_max": 13,
+      "i_range": "14-17"
+    },
+    {
+      "organism": "moraxella_catarrhalis",
+      "antibiotic": "AMC20_10",
+      "s_min": 24,
+      "r_max": 23,
+      "i_range": "-"
+    },
+    {
+      "organism": "enterobacterales",
+      "antibiotic": "AZT30",
+      "s_min": 21,
+      "r_max": 17,
+      "i_range": "18-20"
+    },
+    {
+      "organism": "pseudomonas_aeruginosa",
+      "antibiotic": "AZT30",
+      "s_min": 22,
+      "r_max": 15,
+      "i_range": "16-21"
+    },
+    {
+      "organism": "haemophilus_influenzae",
+      "antibiotic": "CTX30",
+      "s_min": 26,
+      "r_max": 25,
+      "i_range": "-"
+    },
+    {
+      "organism": "haemophilus_parainfluenzae",
+      "antibiotic": "CTX30",
+      "s_min": 26,
+      "r_max": 25,
+      "i_range": "-"
+    },
+    {
+      "organism": "enterobacterales",
+      "antibiotic": "CTX30",
+      "s_min": 26,
+      "r_max": 22,
+      "i_range": "23-25"
+    },
+    {
+      "organism": "aeromonas_spp",
+      "antibiotic": "CTX30",
+      "s_min": 26,
+      "r_max": 22,
+      "i_range": "23-25"
+    },
+    {
+      "organism": "vibrio_spp",
+      "antibiotic": "CTX30",
+      "s_min": 26,
+      "r_max": 22,
+      "i_range": "23-25"
+    },
+    {
+      "organism": "acinetobacter_spp",
+      "antibiotic": "CTX30",
+      "s_min": 23,
+      "r_max": 14,
+      "i_range": "15-22"
+    },
+    {
+      "organism": "neisseria_gonorrhoeae",
+      "antibiotic": "CTX30",
+      "s_min": 31,
+      "r_max": 30,
+      "i_range": "-"
+    },
+    {
+      "organism": "neisseria_meningitidis",
+      "antibiotic": "CTX30",
+      "s_min": 34,
+      "r_max": 33,
+      "i_range": "-"
+    },
+    {
+      "organism": "enterobacterales",
+      "antibiotic": "FOX30",
+      "s_min": 18,
+      "r_max": 14,
+      "i_range": "15-17"
+    },
+    {
+      "organism": "aeromonas_spp",
+      "antibiotic": "FOX30",
+      "s_min": 18,
+      "r_max": 14,
+      "i_range": "15-17"
+    },
+    {
+      "organism": "vibrio_spp",
+      "antibiotic": "FOX30",
+      "s_min": 18,
+      "r_max": 14,
+      "i_range": "15-17"
+    },
+    {
+      "organism": "staphylococcus_aureus",
+      "antibiotic": "FOX30",
+      "s_min": 22,
+      "r_max": 21,
+      "i_range": "-"
+    },
+    {
+      "organism": "staphylococcus_lugdunensis",
+      "antibiotic": "FOX30",
+      "s_min": 22,
+      "r_max": 21,
+      "i_range": "-"
+    },
+    {
+      "organism": "staphylococcus_epidermidis",
+      "antibiotic": "FOX30",
+      "s_min": 25,
+      "r_max": 24,
+      "i_range": "-"
+    },
+    {
+      "organism": "staphylococcus_spp",
+      "antibiotic": "FOX30",
+      "s_min": 25,
+      "r_max": 24,
+      "i_range": "-"
+    },
+    {
+      "organism": "enterobacterales",
+      "antibiotic": "CAZ30",
+      "s_min": 21,
+      "r_max": 17,
+      "i_range": "18-20"
+    },
+    {
+      "organism": "aeromonas_spp",
+      "antibiotic": "CAZ30",
+      "s_min": 21,
+      "r_max": 17,
+      "i_range": "18-20"
+    },
+    {
+      "organism": "vibrio_spp",
+      "antibiotic": "CAZ30",
+      "s_min": 21,
+      "r_max": 17,
+      "i_range": "18-20"
+    },
+    {
+      "organism": "pseudomonas_aeruginosa",
+      "antibiotic": "CAZ30",
+      "s_min": 18,
+      "r_max": 14,
+      "i_range": "15-17"
+    },
+    {
+      "organism": "acinetobacter_spp",
+      "antibiotic": "CAZ30",
+      "s_min": 18,
+      "r_max": 14,
+      "i_range": "15-17"
+    },
+    {
+      "organism": "enterobacterales",
+      "antibiotic": "CRO30",
+      "s_min": 23,
+      "r_max": 19,
+      "i_range": "20-22"
+    },
+    {
+      "organism": "aeromonas_spp",
+      "antibiotic": "CRO30",
+      "s_min": 23,
+      "r_max": 19,
+      "i_range": "20-22"
+    },
+    {
+      "organism": "salmonella_spp",
+      "antibiotic": "CRO30",
+      "s_min": 23,
+      "r_max": 19,
+      "i_range": "20-22"
+    },
+    {
+      "organism": "shigella_spp",
+      "antibiotic": "CRO30",
+      "s_min": 23,
+      "r_max": 19,
+      "i_range": "20-22"
+    },
+    {
+      "organism": "acinetobacter_spp",
+      "antibiotic": "CRO30",
+      "s_min": 21,
+      "r_max": 13,
+      "i_range": "14-20"
+    },
+    {
+      "organism": "neisseria_meningitidis",
+      "antibiotic": "CRO30",
+      "s_min": 34,
+      "r_max": 33,
+      "i_range": "-"
+    },
+    {
+      "organism": "beta_streptococcus_spp",
+      "antibiotic": "CRO30",
+      "s_min": 24,
+      "r_max": 23,
+      "i_range": "-"
+    },
+    {
+      "organism": "viridans_group_streptococcus",
+      "antibiotic": "CRO30",
+      "s_min": 27,
+      "r_max": 24,
+      "i_range": "25-26"
+    },
+    {
+      "organism": "haemophilus_influenzae",
+      "antibiotic": "CXM30",
+      "s_min": 20,
+      "r_max": 16,
+      "i_range": "17-19"
+    },
+    {
+      "organism": "haemophilus_parainfluenzae",
+      "antibiotic": "CXM30",
+      "s_min": 20,
+      "r_max": 16,
+      "i_range": "17-19"
+    },
+    {
+      "organism": "enterobacterales",
+      "antibiotic": "CXM30",
+      "s_min": 23,
+      "r_max": 14,
+      "i_range": "15-22"
+    },
+    {
+      "organism": "aeromonas_spp",
+      "antibiotic": "CXM30",
+      "s_min": 18,
+      "r_max": 14,
+      "i_range": "15-17"
+    },
+    {
+      "organism": "vibrio_spp",
+      "antibiotic": "CXM30",
+      "s_min": 18,
+      "r_max": 14,
+      "i_range": "15-17"
+    },
+    {
+      "organism": "streptococcus_pneumoniae",
+      "antibiotic": "CXM30",
+      "s_min": 21,
+      "r_max": 20,
+      "i_range": "-"
+    },
+    {
+      "organism": "neisseria_meningitidis",
+      "antibiotic": "CXM30",
+      "s_min": 26,
+      "r_max": 19,
+      "i_range": "20-25"
+    },
+    {
+      "organism": "enterobacterales",
+      "antibiotic": "CIP5",
+      "s_min": 26,
+      "r_max": 21,
+      "i_range": "22-25"
+    },
+    {
+      "organism": "shigella_spp",
+      "antibiotic": "CIP5",
+      "s_min": 26,
+      "r_max": 21,
+      "i_range": "22-25"
+    },
+    {
+      "organism": "salmonella_spp",
+      "antibiotic": "CIP5",
+      "s_min": 31,
+      "r_max": 20,
+      "i_range": "21-30"
+    },
+    {
+      "organism": "pseudomonas_aeruginosa",
+      "antibiotic": "CIP5",
+      "s_min": 25,
+      "r_max": 18,
+      "i_range": "19-24"
+    },
+    {
+      "organism": "acinetobacter_spp",
+      "antibiotic": "CIP5",
+      "s_min": 21,
+      "r_max": 15,
+      "i_range": "16-20"
+    },
+    {
+      "organism": "aeromonas_spp",
+      "antibiotic": "CIP5",
+      "s_min": 21,
+      "r_max": 15,
+      "i_range": "16-20"
+    },
+    {
+      "organism": "neisseria_gonorrhoeae",
+      "antibiotic": "CIP5",
+      "s_min": 41,
+      "r_max": 27,
+      "i_range": "28-40"
+    },
+    {
+      "organism": "neisseria_meningitidis",
+      "antibiotic": "CIP5",
+      "s_min": 35,
+      "r_max": 32,
+      "i_range": "33-34"
+    },
+    {
+      "organism": "staphylococcus_spp",
+      "antibiotic": "CC2",
+      "s_min": 21,
+      "r_max": 14,
+      "i_range": "15-20"
+    },
+    {
+      "organism": "enterobacterales",
+      "antibiotic": "ETP10",
+      "s_min": 22,
+      "r_max": 18,
+      "i_range": "19-21"
+    },
+    {
+      "organism": "aeromonas_spp",
+      "antibiotic": "ETP10",
+      "s_min": 22,
+      "r_max": 18,
+      "i_range": "19-21"
+    },
+    {
+      "organism": "staphylococcus_spp",
+      "antibiotic": "E15",
+      "s_min": 23,
+      "r_max": 13,
+      "i_range": "14-22"
+    },
+    {
+      "organism": "streptococcus_pneumoniae",
+      "antibiotic": "E15",
+      "s_min": 21,
+      "r_max": 15,
+      "i_range": "16-20"
+    },
+    {
+      "organism": "beta_streptococcus_spp",
+      "antibiotic": "E15",
+      "s_min": 21,
+      "r_max": 15,
+      "i_range": "16-20"
+    },
+    {
+      "organism": "viridans_group_streptococcus",
+      "antibiotic": "E15",
+      "s_min": 21,
+      "r_max": 15,
+      "i_range": "16-20"
+    },
+    {
+      "organism": "enterococcus_faecalis",
+      "antibiotic": "FOS200",
+      "s_min": 16,
+      "r_max": 12,
+      "i_range": "13-15"
+    },
+    {
+      "organism": "escherichia_coli",
+      "antibiotic": "FOS200",
+      "s_min": 16,
+      "r_max": 12,
+      "i_range": "13-15"
+    },
+    {
+      "organism": "staphylococcus_spp",
+      "antibiotic": "FU10",
+      "s_min": 24,
+      "r_max": 24,
+      "i_range": "-"
+    },
+    {
+      "organism": "enterobacterales",
+      "antibiotic": "GM10",
+      "s_min": 18,
+      "r_max": 14,
+      "i_range": "15-17"
+    },
+    {
+      "organism": "aeromonas_spp",
+      "antibiotic": "GM10",
+      "s_min": 15,
+      "r_max": 12,
+      "i_range": "13-14"
+    },
+    {
+      "organism": "vibrio_spp",
+      "antibiotic": "GM10",
+      "s_min": 15,
+      "r_max": 12,
+      "i_range": "13-14"
+    },
+    {
+      "organism": "acinetobacter_spp",
+      "antibiotic": "GM10",
+      "s_min": 19,
+      "r_max": 13,
+      "i_range": "14-18"
+    },
+    {
+      "organism": "enterococcus",
+      "antibiotic": "GM120",
+      "s_min": 10,
+      "r_max": 6,
+      "i_range": "7-9"
+    },
+    {
+      "organism": "enterobacterales",
+      "antibiotic": "IPM10",
+      "s_min": 23,
+      "r_max": 19,
+      "i_range": "20-22"
+    },
+    {
+      "organism": "aeromonas_spp",
+      "antibiotic": "IPM10",
+      "s_min": 23,
+      "r_max": 19,
+      "i_range": "20-22"
+    },
+    {
+      "organism": "vibrio_spp",
+      "antibiotic": "IPM10",
+      "s_min": 23,
+      "r_max": 19,
+      "i_range": "20-22"
+    },
+    {
+      "organism": "salmonella_spp",
+      "antibiotic": "IPM10",
+      "s_min": 23,
+      "r_max": 19,
+      "i_range": "20-22"
+    },
+    {
+      "organism": "shigella_spp",
+      "antibiotic": "IPM10",
+      "s_min": 23,
+      "r_max": 19,
+      "i_range": "20-22"
+    },
+    {
+      "organism": "acinetobacter_spp",
+      "antibiotic": "IPM10",
+      "s_min": 22,
+      "r_max": 18,
+      "i_range": "19-21"
+    },
+    {
+      "organism": "pseudomonas_aeruginosa",
+      "antibiotic": "IPM10",
+      "s_min": 19,
+      "r_max": 15,
+      "i_range": "16-18"
+    },
+    {
+      "organism": "enterobacterales",
+      "antibiotic": "MEM10",
+      "s_min": 23,
+      "r_max": 19,
+      "i_range": "20-22"
+    },
+    {
+      "organism": "aeromonas_spp",
+      "antibiotic": "MEM10",
+      "s_min": 23,
+      "r_max": 19,
+      "i_range": "20-22"
+    },
+    {
+      "organism": "vibrio_spp",
+      "antibiotic": "MEM10",
+      "s_min": 23,
+      "r_max": 19,
+      "i_range": "20-22"
+    },
+    {
+      "organism": "acinetobacter_spp",
+      "antibiotic": "MEM10",
+      "s_min": 18,
+      "r_max": 14,
+      "i_range": "15-17"
+    },
+    {
+      "organism": "pseudomonas_aeruginosa",
+      "antibiotic": "MEM10",
+      "s_min": 19,
+      "r_max": 15,
+      "i_range": "16-18"
+    },
+    {
+      "organism": "neisseria_meningitidis",
+      "antibiotic": "MEM10",
+      "s_min": 30,
+      "r_max": 29,
+      "i_range": "-"
+    },
+    {
+      "organism": "enterobacterales",
+      "antibiotic": "NX10",
+      "s_min": 17,
+      "r_max": 12,
+      "i_range": "13-16"
+    },
+    {
+      "organism": "pseudomonas_aeruginosa",
+      "antibiotic": "NX10",
+      "s_min": 17,
+      "r_max": 12,
+      "i_range": "13-16"
+    },
+    {
+      "organism": "streptococcus_pneumoniae",
+      "antibiotic": "OX1",
+      "s_min": 20,
+      "r_max": 19,
+      "i_range": "-"
+    },
+    {
+      "organism": "staphylococcus_pseudintermedius",
+      "antibiotic": "OX1",
+      "s_min": 18,
+      "r_max": 17,
+      "i_range": "-"
+    },
+    {
+      "organism": "staphylococcus_schleiferi",
+      "antibiotic": "OX1",
+      "s_min": 18,
+      "r_max": 17,
+      "i_range": "-"
+    },
+    {
+      "organism": "staphylococcus_coagulans",
+      "antibiotic": "OX1",
+      "s_min": 18,
+      "r_max": 17,
+      "i_range": "-"
+    },
+    {
+      "organism": "enterococcus_spp",
+      "antibiotic": "P10",
+      "s_min": 15,
+      "r_max": 14,
+      "i_range": "-"
+    },
+    {
+      "organism": "beta_streptococcus_spp",
+      "antibiotic": "P10",
+      "s_min": 24,
+      "r_max": 23,
+      "i_range": "-"
+    },
+    {
+      "organism": "neisseria_gonorrhoeae",
+      "antibiotic": "P10",
+      "s_min": 47,
+      "r_max": 26,
+      "i_range": "27-46"
+    },
+    {
+      "organism": "enterobacterales",
+      "antibiotic": "TE30",
+      "s_min": 15,
+      "r_max": 11,
+      "i_range": "12-14"
+    },
+    {
+      "organism": "aeromonas_spp",
+      "antibiotic": "TE30",
+      "s_min": 15,
+      "r_max": 11,
+      "i_range": "12-14"
+    },
+    {
+      "organism": "vibrio_spp",
+      "antibiotic": "TE30",
+      "s_min": 15,
+      "r_max": 11,
+      "i_range": "12-14"
+    },
+    {
+      "organism": "acinetobacter_baumannii_complex",
+      "antibiotic": "TGC15",
+      "s_min": 17,
+      "r_max": 12,
+      "i_range": "13-16"
+    },
+    {
+      "organism": "enterobacterales",
+      "antibiotic": "SXT",
+      "s_min": 16,
+      "r_max": 10,
+      "i_range": "11-15"
+    },
+    {
+      "organism": "aeromonas_spp",
+      "antibiotic": "SXT",
+      "s_min": 16,
+      "r_max": 10,
+      "i_range": "11-15"
+    },
+    {
+      "organism": "acinetobacter_spp",
+      "antibiotic": "SXT",
+      "s_min": 16,
+      "r_max": 10,
+      "i_range": "11-15"
+    },
+    {
+      "organism": "haemophilus_influenzae",
+      "antibiotic": "SXT",
+      "s_min": 16,
+      "r_max": 10,
+      "i_range": "11-15"
+    },
+    {
+      "organism": "haemophilus_parainfluenzae",
+      "antibiotic": "SXT",
+      "s_min": 16,
+      "r_max": 10,
+      "i_range": "11-15"
+    },
+    {
+      "organism": "stenotrophomonas_maltophilia",
+      "antibiotic": "SXT",
+      "s_min": 16,
+      "r_max": 10,
+      "i_range": "11-15"
+    },
+    {
+      "organism": "staphylococcus_spp",
+      "antibiotic": "SXT",
+      "s_min": 16,
+      "r_max": 10,
+      "i_range": "11-15"
+    },
+    {
+      "organism": "salmonella_spp",
+      "antibiotic": "SXT",
+      "s_min": 16,
+      "r_max": 10,
+      "i_range": "11-15"
+    },
+    {
+      "organism": "shigella_spp",
+      "antibiotic": "SXT",
+      "s_min": 16,
+      "r_max": 10,
+      "i_range": "11-15"
+    },
+    {
+      "organism": "vibrio_spp",
+      "antibiotic": "SXT",
+      "s_min": 16,
+      "r_max": 10,
+      "i_range": "11-15"
+    },
+    {
+      "organism": "moraxella_catarrhalis",
+      "antibiotic": "SXT",
+      "s_min": 13,
+      "r_max": 10,
+      "i_range": "11-12"
+    },
+    {
+      "organism": "neisseria_meningitidis",
+      "antibiotic": "SXT",
+      "s_min": 30,
+      "r_max": 25,
+      "i_range": "26-29"
+    },
+    {
+      "organism": "enterococcus_spp",
+      "antibiotic": "VA30",
+      "s_min": 17,
+      "r_max": 14,
+      "i_range": "15-16"
+    },
+    {
+      "organism": "streptococcus_pneumoniae",
+      "antibiotic": "VA30",
+      "s_min": 17,
+      "r_max": 16,
+      "i_range": "-"
+    },
+    {
+      "organism": "beta_streptococcus_spp",
+      "antibiotic": "VA30",
+      "s_min": 17,
+      "r_max": 16,
+      "i_range": "-"
+    },
+    {
+      "organism": "viridans_group_streptococcus",
+      "antibiotic": "VA30",
+      "s_min": 17,
+      "r_max": 16,
+      "i_range": "-"
+    },
+    {
+      "organism": "gram_negative_bacilli",
+      "antibiotic": "SCF30_75",
+      "s_min": 21,
+      "r_max": 15,
+      "i_range": "16-20"
+    },
+    {
+      "organism": "enterobacterales",
+      "antibiotic": "TZP100_10",
+      "s_min": 25,
+      "r_max": 20,
+      "i_range": "21-24 (SDD)"
+    },
+    {
+      "organism": "pseudomonas_aeruginosa",
+      "antibiotic": "TZP100_10",
+      "s_min": 22,
+      "r_max": 17,
+      "i_range": "18-21"
+    },
+    {
+      "organism": "acinetobacter_spp",
+      "antibiotic": "TZP100_10",
+      "s_min": 21,
+      "r_max": 17,
+      "i_range": "18-20"
+    },
+    {
+      "organism": "aeromonas_spp",
+      "antibiotic": "TZP100_10",
+      "s_min": 21,
+      "r_max": 17,
+      "i_range": "18-20"
+    },
+    {
+      "organism": "vibrio_spp",
+      "antibiotic": "TZP100_10",
+      "s_min": 21,
+      "r_max": 17,
+      "i_range": "18-20"
+    },
+    {
+      "organism": "enterobacterales",
+      "antibiotic": "CZA30_20",
+      "s_min": 21,
+      "r_max": 20,
+      "i_range": "-"
+    },
+    {
+      "organism": "pseudomonas_aeruginosa",
+      "antibiotic": "CZA30_20",
+      "s_min": 21,
+      "r_max": 20,
+      "i_range": "-"
+    },
+    {
+      "organism": "enterobacterales",
+      "antibiotic": "CT30_20",
+      "s_min": 22,
+      "r_max": 18,
+      "i_range": "19-21"
+    },
+    {
+      "organism": "pseudomonas_aeruginosa",
+      "antibiotic": "CT30_20",
+      "s_min": 21,
+      "r_max": 16,
+      "i_range": "17-20"
+    }
+  ]
+}

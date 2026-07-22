@@ -1,0 +1,10 @@
+# ZoneScope backend runtime dependencies
+# torch (CPU) ถูกติดตั้งแยกใน Dockerfile ด้วย --index-url .../cpu เพื่อเลี่ยง CUDA build ตัวใหญ่
+# (easyocr จะเห็น torch ที่ลงไว้แล้ว ไม่ดึงซ้ำ)
+fastapi
+uvicorn[standard]
+python-multipart
+opencv-python-headless
+numpy
+easyocr
+# openpyxl ใช้เฉพาะ gen_breakpoints.py (dev tool) ไม่จำเป็นตอน runtime

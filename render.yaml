@@ -1,0 +1,16 @@
+# Render Blueprint สำหรับ ZoneScope backend (FastAPI + easyocr)
+# ⚠️ ต้องการ RAM >= 2GB (torch+easyocr) — free tier (512MB) จะ OOM
+#    เลือก plan ที่ RAM พอ หรือใช้ host อื่น (ดู DEPLOY.md)
+services:
+  - type: web
+    name: zonescope-backend
+    runtime: docker
+    dockerfilePath: ./ZoneScpe-backend/Dockerfile
+    dockerContext: ./ZoneScpe-backend
+    plan: standard          # standard = 2GB RAM (ปรับตามงบ)
+    healthCheckPath: /api/breakpoints
+    envVars:
+      - key: ROBOFLOW_API_KEY
+        sync: false          # ใส่ค่าจริงในหน้า Render (secret)
+      - key: ZONESCOPE_CORS_ORIGINS
+        sync: false          # เช่น https://your-app.vercel.app

@@ -1,0 +1,10 @@
+# secrets — อย่า commit key
+.env
+
+# python
+__pycache__/
+*.pyc
+
+# outputs (regenerate ได้)
+zone_infer_out/
+ocr_crops/

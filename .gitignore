@@ -1,0 +1,31 @@
+# ---- dependencies ----
+**/node_modules/
+
+# ---- python ----
+**/__pycache__/
+*.pyc
+*.pyo
+
+# ---- secrets (ห้าม commit เด็ดขาด) ----
+**/.env
+**/.env.local
+
+# ---- backend runtime outputs (regenerate ได้) ----
+ZoneScpe-backend/uploads/
+ZoneScpe-backend/zone_cache/
+ZoneScpe-backend/ocr_crops/
+ZoneScpe-backend/zonescope_out/label_overlays/
+ZoneScpe-backend/zonescope_out/number_overlays/
+
+# ---- large artifacts (dataset/zip — ไม่ควรขึ้น git) ----
+**/*.zip
+ZoneScpe-backend/zonescope_dataset/
+ZoneScpe-backend/zonescope_dataset_single/
+
+# ---- frontend build ----
+**/dist/
+**/.vite/
+
+# ---- editor / os ----
+.DS_Store
+Thumbs.db
