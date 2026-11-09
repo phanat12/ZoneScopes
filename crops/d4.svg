@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <rect width="120" height="120" fill="#C4B790"/>
+  <circle cx="60" cy="60" r="54" fill="#ECE5D3"/>
+  <circle cx="60" cy="60" r="30" fill="#F8F6F1" stroke="#A99E82" stroke-width="2"/>
+  <text x="60" y="64" font-family="monospace" font-size="15" font-weight="700" fill="#5f5847" text-anchor="middle">CTX30</text>
+</svg>
